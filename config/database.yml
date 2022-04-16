@@ -5,7 +5,7 @@ default: &default
   username: <%= ENV["DB_USER"] %>
   password: <%= ENV["APP_DATABASE_PASSWORD"] %> 
   port: <%= ENV["APP_PORT"] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 30 } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
 
 development:
   <<: *default
